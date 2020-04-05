@@ -1,0 +1,51 @@
+{% extends 'layouts/index.html'%}
+
+{% block title %}{{ super() }} Day details {% endblock %}
+
+{% block content %}
+    <div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{ pretty_date }}</h3>
+            </div>
+
+            <div class="panel-body">
+
+              <form method="POST" action="{{ url_for('day', date=entry_date) }}">
+                <div class="form-group">
+                  <select class="form-control" name="food-list">
+                    {% for food in food_list %}
+                    <option value="{{ food.id }}">{{ food.name }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+              </form>
+
+              <div class="page-header"></div>
+
+              <ul class="nav nav-pills" role="tablist">
+                <li class="active"><a>Total</a></li>
+                <li><a>Protein: <span class="badge">{{ total.protein }}</span></a></li>
+                <li><a>Carbohydates: <span class="badge">{{ total.carbohydrates }}</span></a></li>
+                <li><a>Fat: <span class="badge">{{ total.fat }}</span></a></li>
+                <li><a>Calories: <span class="badge">{{ total.calories }}</span></a></li>
+              </ul>
+
+            </div>
+
+            <div class="page-header"></div>
+            {% for food in log_result %}
+            <div class="panel-body">
+              <ul class="nav nav-pills" role="tablist">
+                <li class="active"><a>{{ food.name }}</a></li>
+                <li><a>Protein: <span class="badge">{{ food.protein }}</span></a></li>
+                <li><a>Carbohydates: <span class="badge">{{ food.carbohydrates }}</span></a></li>
+                <li><a>Fat: <span class="badge">{{ food.fat }}</span></a></li>
+                <li><a>Calories: <span class="badge">{{ food.calories }}</span></a></li>
+              </ul>
+            </div>
+            {% endfor %}
+          </div>
+    </div>
+{% endblock %}

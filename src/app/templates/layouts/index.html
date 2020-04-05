@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Food Tracker | {% endblock %}</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Custom styles for this templates -->
+    <link href="{{ url_for('static', filename='theme.css') }}" rel="stylesheet">
+</head>
+<body>
+ {% include 'partials/_navbar.html' %}
+  <div class="container theme-showcase col-sm-6 col-sm-offset-3" role="main">
+      <div class="row">
+          {% block content %}{% endblock %}
+      </div>
+  </div>
+</body>
+</html>

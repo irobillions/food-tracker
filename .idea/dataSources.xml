@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="foof_log" uuid="969b7bd9-3402-46a9-97f2-dc392307fc26">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\hp\Travaux\Food-tracker\foof_log.db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="food_log" uuid="bf6ef60a-3f49-41d1-b376-a7fb9b3a4f0a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\hp\Travaux\flask-projet\Food-tracker-app\food_log.db</jdbc-url>
+    </data-source>
+  </component>
+</project>
