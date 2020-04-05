@@ -6,4 +6,4 @@ I used python@3.7.2 for this projet
   - create an virtual environment with
   	py -p venv <nameofyourvirtualenvironment> python3
   - run the app
-  	python run.p
+  	python run.py
